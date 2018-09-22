@@ -1,0 +1,29 @@
+.outline{
+  float: right;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 18px;
+  display: inline-block;
+  background: #fff;
+  border: .009px solid lightgrey;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+  width: 630px;
+  height: 95vh;
+  border-radius: 8px;
+  margin-right: 15px;
+  overflow: scroll;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 20px;
+  line-height: 23px;
+}
+
+.placeholder{
+  color: #FF5C1C;
+  opacity: 0.4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}

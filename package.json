@@ -6,8 +6,8 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "google": "https://github.com/JoshuaScript/node-google",
     "morgan": "^1.9.0",
+    "puppeteer": "^1.8.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.7",
@@ -15,7 +15,9 @@
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "request": "^2.88.0",
     "styled-components": "^3.4.5",
+    "unfluff": "^3.2.0",
     "x-ray": "^2.3.3"
   },
   "scripts": {

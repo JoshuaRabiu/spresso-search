@@ -2,9 +2,17 @@ import { combineReducers, applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger'
 import { resultsReducer } from './resultsReducer.js';
+import { loadingStatusReducer } from './loadingStatus.js';
+import { outlineReducer } from './outlineReducer.js';
+import { queryReducer } from './queryReducer.js';
+import { counterReducer } from './counter.js';
 
 export const rootReducer = combineReducers({
-	results: resultsReducer
+	results: resultsReducer,
+	loadingStatus: loadingStatusReducer,
+	outline: outlineReducer,
+	query: queryReducer,
+	counter: counterReducer
 })
 
 const middleware = applyMiddleware(thunk, logger)

@@ -1,0 +1,4 @@
+loop through store.results, for each index of results, check if the image is null.
+Send array of links associated with undefined images to node func that screenshots each, and appends the value to an array
+
+In result.js, if data.image is null, then call func to loop through screenshot store?

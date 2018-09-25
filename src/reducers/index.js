@@ -6,15 +6,19 @@ import { loadingStatusReducer } from './loadingStatus.js';
 import { outlineReducer } from './outlineReducer.js';
 import { queryReducer } from './queryReducer.js';
 import { counterReducer } from './counter.js';
+import { screenshotsReducer } from './screenshotsReducer.js';
+import { linksToScreenshotReducer } from './linksToScreenshotReducer.js';
 
 export const rootReducer = combineReducers({
 	results: resultsReducer,
 	loadingStatus: loadingStatusReducer,
 	outline: outlineReducer,
 	query: queryReducer,
-	counter: counterReducer
+	counter: counterReducer,
+	screenshots: screenshotsReducer,
+	linksToScreenshot: linksToScreenshotReducer
 })
 
 const middleware = applyMiddleware(thunk, logger)
 export const store = createStore(rootReducer, middleware)
-store.subscribe(() => console.log(store.getState()))
+// store.subscribe(() => console.log(store.getState()))

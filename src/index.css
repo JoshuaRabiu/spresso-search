@@ -145,6 +145,8 @@
  
  a {
    background-color: transparent;
+   text-decoration: none;
+   color: inherit;
  }
  
  /**
@@ -596,6 +598,6 @@
   font-family: europa;
 }
 body {
-  background: rgb(250, 250, 250);
+  background: #fff;
 
 }

@@ -1,0 +1,7 @@
+.about{
+  float: right;
+  padding: 15px;
+}
+.about:hover{
+  text-decoration: underline;
+}

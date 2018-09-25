@@ -10,18 +10,35 @@ export const search = (e) => {
 				.then(res => dispatch({ type: 'SEND_RESULTS', payload: res.data }))
 				.then(() => {
 					dispatch({ type: 'LOADING_STATUS', payload: false });
+					const arr = []
+					for (let i = 0; i < store.getState().results.length; i++) {
+						if (!!store.getState().results[i].image === false) {
+							arr.push(store.getState().results[i].link)
+						}
+						else {
+							continue
+						}
+					}
+					dispatch({type: 'SEND_LINKS', payload: arr})
+					console.log(`LENGTH: ${store.getState().linksToScreenshot.length}`)
+					screenshot(arr)
 				})
 		}
 	})
 }
 
+const screenshot = (arr) => {
+	axios.post(`screenshot/${arr}`)
+	.then(res => store.dispatch({type: 'SEND_SCREENSHOTS', payload: res.data}))
+}
+
 export const changePage = (which) => {
 	store.dispatch((dispatch) => {
 		const switchPage = () => {
-			dispatch({type: 'LOADING_STATUS', payload: true})
+			dispatch({ type: 'LOADING_STATUS', payload: true })
 			axios.post(`/search/${store.getState().query}/${store.getState().counter}`)
 				.then(res => dispatch({ type: 'SEND_RESULTS', payload: res.data }))
-				.then(() => dispatch({type: 'LOADING_STATUS', payload: false}))
+				.then(() => dispatch({ type: 'LOADING_STATUS', payload: false }))
 		}
 		switch (which) {
 			case 'back':

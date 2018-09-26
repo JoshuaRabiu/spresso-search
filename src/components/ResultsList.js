@@ -4,20 +4,36 @@ import { Outline } from './Outline';
 import { changePage } from '../actions';
 import './ResultsList.css'
 
-
 export const ResultsList = ({ results, outline, loadingStatus, counter, screenshots, linksToScreenshot }) => {
   const ResultsArray = []
   const len = results.length
   for (let i = 0; i < len; i++) {
+    // if (results[i].link in linksToScreenshot) {
+    //   for (let j = 0; j < linksToScreenshot.length; j++) {
+    //     if (results[i].link === screenshots[j].link) {
+    //       ResultsArray.push(<Result data={results[i]} screenshot={screenshots[j].image} />)
+    //     }
+    //     else if (!!screenshots.length === false) {
+    //       ResultsArray.push(<Result data={results[i]} screenshot={} />)
+    //     }
+    //   }
+    // }
+
     if (!!results[i].image === false) {
       for (let j = 0; j < linksToScreenshot.length; j++) {
-        ResultsArray.push(<Result data={results[i]} screenshot={screenshots[j]} />)
+        if (!!screenshots.length === false) {
+          continue
+        }
+        else if (!!screenshots.length === true && results[i].link === screenshots[j].site) {
+          ResultsArray.push(<Result data={results[i]} screenshot={screenshots[j].image} />)
+        }
       }
     }
     else {
       ResultsArray.push(<Result data={results[i]} />)
     }
   }
+
 
   return (
     <div>

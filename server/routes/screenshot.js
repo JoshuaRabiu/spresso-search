@@ -14,7 +14,10 @@ router.post('/:url(*)', (req, res) => {
         await page.goto(link, {waitUntil: 'networkidle2'});
         const snap = await page.screenshot();
         const image = `data:image/png;base64,${snap.toString('base64')}`
-        newArr.push(image)
+        newArr.push({
+          site: link,
+          image: image
+        })
       }))
     })
     await Promise.all(promises)

@@ -1,4 +1,14 @@
-loop through store.results, for each index of results, check if the image is null.
-Send array of links associated with undefined images to node func that screenshots each, and appends the value to an array
+create empty screenshot field for each result
+if link in linkstoscreenshot && !screenshot: display loading 
+push all normally
+component level: if 
 
-In result.js, if data.image is null, then call func to loop through screenshot store?
+
+if(result.link in linkstoscreenshot){
+  if(result[i].link === screenshot.site){
+    push()
+  }
+  else if(!screenshot){
+    push()
+  }
+}

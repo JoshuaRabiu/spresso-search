@@ -2,7 +2,7 @@ import React from 'react';
 import { Result } from './Result';
 import { Outline } from './Outline';
 import { changePage } from '../actions';
-import './ResultsList.css'
+import '../style/ResultsList.css'
 
 export const ResultsList = ({ results, outline, loadingStatus, counter, screenshots, linksToScreenshot }) => {
   const ResultsArray = []

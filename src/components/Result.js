@@ -1,5 +1,5 @@
 import React from 'react';
-import './Result.css'
+import '../style/Result.css'
 import { outline } from '../actions';
 import preloader from '../images/preloader.gif'
 import document from '../images/document.svg';

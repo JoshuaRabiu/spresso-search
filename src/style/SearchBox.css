@@ -3,19 +3,13 @@
   top: 50%;
   left: 50%;
   margin-right: -50%;
-transform: translate(-50%, -50%);
-line-height: normal;
+  transform: translate(-50%, -50%);
+  line-height: normal;
 }
 .home-logo{
   display: inline;
   text-align: center;
   color: #FF540D;
-  /* display: inline-block;
-  width: 300px;
-  height: 300px;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 80px; right: 0; */
 }
 .home-logo-2{
   display: inline;
@@ -24,13 +18,9 @@ line-height: normal;
   margin-right: 50px;
 }
 input{
-  /* margin: 0 auto; */
-  /* display: inline-block; */
   width: 590px;
   height: 58px;
   margin: auto;
-  /* position: absolute;
-  top: 0; left: 0; bottom: 80px; right: 0; */
   font-size: inherit;
   padding: 0 28px 0 28px;
   border-radius: 48px;

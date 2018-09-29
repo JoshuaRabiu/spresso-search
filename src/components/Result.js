@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/Result.css'
 import { outline } from '../actions';
-import preloader from '../images/preloader.gif'
+import placeholder from '../images/placeholder.png'
 import document from '../images/document.svg';
 
 const determine = (preview, plceholder, scrnshot) => {
@@ -18,7 +18,7 @@ const determine = (preview, plceholder, scrnshot) => {
 
 export const Result = ({ data, screenshot }) => (
   <div className="card">
-    <a target="_blank" href={data.link}><img className="preview" src={determine(data.image, preloader, screenshot)} /></a>
+    <a target="_blank" href={data.link}><img className="preview" src={determine(data.image, placeholder, screenshot)} /></a>
     <div className="card-body">
     <div className="title-bar">
     <a target="_blank" href={data.link}><img className="favicon" src={!!data.favicon ? data.favicon : `https://www.google.com/s2/favicons?domain=${data.link}`} /></a>

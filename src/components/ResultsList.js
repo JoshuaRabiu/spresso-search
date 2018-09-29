@@ -19,22 +19,22 @@ export const ResultsList = ({ results, outline, loadingStatus, counter, screensh
     //   }
     // }
 
-    if (!!results[i].image === false) {
-      main:
-      for (let j = 0; j < linksToScreenshot.length; j++) {
-        if (!!screenshots.length === false) {
-          ResultsArray.push(<Result data={results[i]} screenshot={screenshots[j]} />)
-          break main;
-        }
-        else if (!!screenshots.length === true && results[i].link === screenshots[j].site) {
-          ResultsArray[i] = <Result data={results[i]} screenshot={screenshots[j].image} />
-          break main;
-        }
-      }
-    }
-    else {
+    // if (!!results[i].image === false) {
+    //   main:
+    //   for (let j = 0; j < linksToScreenshot.length; j++) {
+    //     if (!!screenshots.length === false) {
+    //       ResultsArray.push(<Result data={results[i]} screenshot={screenshots[j]} />)
+    //       break main;
+    //     }
+    //     else if (!!screenshots.length === true && results[i].link === screenshots[j].site) {
+    //       ResultsArray[i] = <Result data={results[i]} screenshot={screenshots[j].image} />
+    //       break main;
+    //     }
+    //   }
+    // }
+    // else {
       ResultsArray.push(<Result data={results[i]} />)
-    }
+    // }
   }
 
 
@@ -42,7 +42,8 @@ export const ResultsList = ({ results, outline, loadingStatus, counter, screensh
     <div>
       <Outline outline={outline} />
       {ResultsArray}
-      <button className={!!counter + !!loadingStatus === 0 ? "invisible" : null} onClick={() => changePage('back')}>Previous Page</button>
+      {`Current Page: ${counter === 0 ? 1 : counter/10 + 1}`}
+      <img className={!!counter + !!loadingStatus === 0 ? "invisible" : null} onClick={() => changePage('back')} />
       <button onClick={() => changePage('forward')}>Next Page</button>
     </div>
   )

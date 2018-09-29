@@ -20,8 +20,6 @@ h4 a:hover{
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   border: .009px solid lightgrey;
   transition: all 300ms ease;
-  -webkit-transition-delay: 300ms; /* Safari */
-    transition-delay: 300ms;
 }
 .card:hover{
   transform: scale(1.01);

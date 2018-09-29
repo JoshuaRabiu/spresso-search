@@ -20,12 +20,15 @@ export const ResultsList = ({ results, outline, loadingStatus, counter, screensh
     // }
 
     if (!!results[i].image === false) {
+      main:
       for (let j = 0; j < linksToScreenshot.length; j++) {
         if (!!screenshots.length === false) {
-          continue
+          ResultsArray.push(<Result data={results[i]} screenshot={screenshots[j]} />)
+          break main;
         }
         else if (!!screenshots.length === true && results[i].link === screenshots[j].site) {
-          ResultsArray.push(<Result data={results[i]} screenshot={screenshots[j].image} />)
+          ResultsArray[i] = <Result data={results[i]} screenshot={screenshots[j].image} />
+          break main;
         }
       }
     }

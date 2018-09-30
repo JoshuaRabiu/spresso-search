@@ -10,6 +10,7 @@
     "puppeteer": "^1.8.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-infinite-scroll-component": "^4.2.0",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.5",
     "redux": "^4.0.0",

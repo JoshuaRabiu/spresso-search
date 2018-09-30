@@ -5,8 +5,8 @@ export const search = (e) => {
 	store.dispatch((dispatch) => {
 		if (e.key === 'Enter') {
 			dispatch({ type: 'LOADING_STATUS', payload: true })
-			dispatch({ type: 'SET_QUERY', payload: e.target.value })
-			axios.post(`/search/${encodeURI(e.target.value)}`)
+			dispatch({ type: 'SET_QUERY', payload: encodeURI(e.target.value) })
+			axios.post(`/search/${store.getState().query}`)
 				.then(res => dispatch({ type: 'SEND_RESULTS', payload: res.data }))
 				.then(() => {
 					dispatch({ type: 'LOADING_STATUS', payload: false });
@@ -19,9 +19,9 @@ export const search = (e) => {
 							continue
 						}
 					}
-					dispatch({type: 'SEND_LINKS', payload: arr})
-					console.log(`LENGTH: ${store.getState().linksToScreenshot.length}`)
-					screenshot(arr)
+					dispatch({ type: 'SEND_LINKS', payload: arr })
+					// console.log(`LENGTH: ${store.getState().linksToScreenshot.length}`)
+					// screenshot(arr)
 				})
 		}
 	})
@@ -29,33 +29,19 @@ export const search = (e) => {
 
 const screenshot = (arr) => {
 	axios.post(`screenshot/${arr}`)
-	.then(res => store.dispatch({type: 'SEND_SCREENSHOTS', payload: res.data}))
+		.then(res => store.dispatch({ type: 'SEND_SCREENSHOTS', payload: res.data }))
 }
 
-export const changePage = (which) => {
+export const changePage = () => {
 	store.dispatch((dispatch) => {
-		const switchPage = () => {
-			dispatch({ type: 'LOADING_STATUS', payload: true })
-			axios.post(`/search/${store.getState().query}/${store.getState().counter}`)
-				.then(res => dispatch({ type: 'SEND_RESULTS', payload: res.data }))
-				.then(() => dispatch({ type: 'LOADING_STATUS', payload: false }))
-		}
-		switch (which) {
-			case 'back':
-				dispatch({ type: 'DECREMENT' })
-				switchPage()
-				break;
-			case 'forward':
-				dispatch({ type: 'INCREMENT' })
-				switchPage()
-				break;
-			default:
-				alert('An error occured')
-				break;
-		}
+		// dispatch({ type: 'LOADING_STATUS', payload: true })
+		dispatch({ type: 'INCREMENT' })
+		axios.post(`/search/${store.getState().query}/${store.getState().counter}`)
+			.then(res => dispatch({ type: 'SEND_RESULTS', payload: res.data }))
+		// .then(() => dispatch({ type: 'LOADING_STATUS', payload: false }))
 	})
-
 }
+
 
 export const outline = (site) => {
 	store.dispatch((dispatch) => {

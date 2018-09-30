@@ -3,6 +3,7 @@ import { Result } from './Result';
 import { Outline } from './Outline';
 import { changePage } from '../actions';
 import '../style/ResultsList.css'
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 export const ResultsList = ({ results, outline, loadingStatus, counter, screenshots, linksToScreenshot }) => {
   const ResultsArray = []
@@ -33,7 +34,7 @@ export const ResultsList = ({ results, outline, loadingStatus, counter, screensh
     //   }
     // }
     // else {
-      ResultsArray.push(<Result data={results[i]} />)
+    ResultsArray.push(<Result data={results[i]} />)
     // }
   }
 
@@ -41,10 +42,14 @@ export const ResultsList = ({ results, outline, loadingStatus, counter, screensh
   return (
     <div>
       <Outline outline={outline} />
-      {ResultsArray}
-      {`Current Page: ${counter === 0 ? 1 : counter/10 + 1}`}
-      <img className={!!counter + !!loadingStatus === 0 ? "invisible" : null} onClick={() => changePage('back')} />
-      <button onClick={() => changePage('forward')}>Next Page</button>
+      <InfiniteScroll
+        dataLength={len}
+        next={changePage}
+        hasMore={true}
+        loader={<h4>Loading...</h4>}
+        >
+        {ResultsArray}
+      </InfiniteScroll>
     </div>
   )
 }

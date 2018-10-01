@@ -10,35 +10,47 @@ export const search = (e) => {
 				.then(res => dispatch({ type: 'SEND_RESULTS', payload: res.data }))
 				.then(() => {
 					dispatch({ type: 'LOADING_STATUS', payload: false });
-					const arr = []
-					for (let i = 0; i < store.getState().results.length; i++) {
-						if (!!store.getState().results[i].image === false) {
-							arr.push(store.getState().results[i].link)
-						}
-						else {
-							continue
-						}
-					}
-					dispatch({ type: 'SEND_LINKS', payload: arr })
-					// console.log(`LENGTH: ${store.getState().linksToScreenshot.length}`)
-					// screenshot(arr)
+					screenGrab()
 				})
 		}
 	})
 }
 
-const screenshot = (arr) => {
-	axios.post(`screenshot/${arr}`)
-		.then(res => store.dispatch({ type: 'SEND_SCREENSHOTS', payload: res.data }))
+const screenGrab = () => {
+	const arr = []
+	for (let i = 0; i < store.getState().results.length; i++) {
+		if (!!store.getState().results[i].image === false) {
+			arr.push(store.getState().results[i].link)
+		}
+	}
+	store.dispatch({ type: 'SEND_LINKS', payload: arr })
+	screenshot(arr)
+}
+
+const screenshot = (param) => {
+	const len = param.length;
+	for (let i = 0; i < len; i++) {
+		console.log('running')
+		const link = param[i];
+		const enc = encodeURIComponent(link);
+		axios.get(`https://www.googleapis.com/pagespeedonline/v1/runPagespeed?screenshot=true&url=${enc}`)
+			.then(res => {
+				let sc = res.data.screenshot;
+				let imgData = sc.data.replace(/_/g, '/').replace(/-/g, '+');
+				const scr = 'data:' + sc.mime_type + ';base64,' + imgData;
+				store.dispatch({type: 'SEND_SCREENSHOTS', payload: {link: link, screenshot: scr} })
+			})
+	}
 }
 
 export const changePage = () => {
 	store.dispatch((dispatch) => {
-		// dispatch({ type: 'LOADING_STATUS', payload: true })
 		dispatch({ type: 'INCREMENT' })
 		axios.post(`/search/${store.getState().query}/${store.getState().counter}`)
-			.then(res => dispatch({ type: 'SEND_RESULTS', payload: res.data }))
-		// .then(() => dispatch({ type: 'LOADING_STATUS', payload: false }))
+			.then(res => {
+				dispatch({ type: 'SEND_RESULTS', payload: res.data })
+				screenGrab()
+			})
 	})
 }
 

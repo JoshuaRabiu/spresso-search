@@ -17,8 +17,8 @@ h4 a:hover{
   border-radius: 8px;
   margin: 15px;
   background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
-  border: .009px solid lightgrey;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
+  border: .008px solid lightgrey;
   transition: all 300ms ease;
 }
 .card:hover{
@@ -39,11 +39,10 @@ h4 a:hover{
   border-bottom-left-radius: 8px;
 }
 .favicon{
-  width: 30px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
   float: left;
-  border-radius: 2px;
-  margin-right: 13px;
+  margin: 13px;
 }
 .title{
   vertical-align: bottom;

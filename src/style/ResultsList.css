@@ -1,3 +1,7 @@
 .invisible{
   display: none;
 }
+.loading-text{
+  color: slategrey;
+  margin: 15px;
+}

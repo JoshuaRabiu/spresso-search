@@ -7,7 +7,6 @@ import { outlineReducer } from './outlineReducer.js';
 import { queryReducer } from './queryReducer.js';
 import { counterReducer } from './counter.js';
 import { screenshotsReducer } from './screenshotsReducer.js';
-import { linksToScreenshotReducer } from './linksToScreenshotReducer.js';
 
 export const rootReducer = combineReducers({
 	results: resultsReducer,
@@ -15,8 +14,7 @@ export const rootReducer = combineReducers({
 	outline: outlineReducer,
 	query: queryReducer,
 	counter: counterReducer,
-	screenshots: screenshotsReducer,
-	linksToScreenshot: linksToScreenshotReducer
+	screenshots: screenshotsReducer
 })
 
 const middleware = applyMiddleware(thunk, logger)

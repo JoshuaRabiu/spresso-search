@@ -5,7 +5,7 @@ import { changePage } from '../actions';
 import '../style/ResultsList.css'
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-export const ResultsList = ({ results, outline, loadingStatus, counter, screenshots, linksToScreenshot }) => {
+export const ResultsList = ({ results, outline, loadingStatus, counter, screenshots }) => {
   const ResultsArray = []
   const len = results.length
   for (let i = 0; i < len; i++) {

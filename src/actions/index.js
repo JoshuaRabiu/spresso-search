@@ -23,7 +23,6 @@ const screenGrab = () => {
 			arr.push(store.getState().results[i].link)
 		}
 	}
-	store.dispatch({ type: 'SEND_LINKS', payload: arr })
 	screenshot(arr)
 }
 

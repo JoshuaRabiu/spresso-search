@@ -1,9 +1,13 @@
 import { store } from '../reducers/index';
 import axios from 'axios';
 
-export const search = (e) => {
+export const search = (e, reset) => {
 	store.dispatch((dispatch) => {
+	
 		if (e.key === 'Enter') {
+			if(reset){
+				dispatch({type: 'RESET_RESULTS'})
+			}
 			dispatch({ type: 'LOADING_STATUS', payload: true })
 			dispatch({ type: 'SET_QUERY', payload: encodeURI(e.target.value) })
 			axios.post(`/search/${store.getState().query}`)

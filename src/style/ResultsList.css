@@ -5,3 +5,20 @@
   color: slategrey;
   margin: 15px;
 }
+.top-bar{
+  position: sticky;
+  top: 0px;
+  z-index: 500;
+  background: #fff;
+  height: 60px;
+  width: 100vw;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
+
+}
+.top-bar input{
+  margin-left: 3vw;
+  height: 5.5vh;
+  margin-top: 7px;
+  box-shadow: none;
+  border: 1px solid lightgrey;
+}

@@ -4,12 +4,12 @@ import { SearchBox } from '../components/SearchBox';
 import { Loader } from '../components/Loader';
 import { ResultsList } from '../components/ResultsList';
 
-export const Home = ({results, loadingStatus, outline, query, counter, screenshots}) => {
+export const Home = ({results, loadingStatus, outline, query, screenshots}) => {
   if(loadingStatus === true){
     return <Loader />
   }
   if(results.length > 0){
-    return <ResultsList results={results} outline={outline} query={query} counter={counter} screenshots={screenshots} />
+    return <ResultsList results={results} outline={outline} query={query} screenshots={screenshots} query={query} />
   }
   return <SearchBox results={results} />
 }

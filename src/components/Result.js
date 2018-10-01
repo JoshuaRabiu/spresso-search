@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/Result.css'
 import { outline } from '../actions';
-import preloader from '../images/preloader.gif'
+import imgLoader from '../images/imgLoader.gif'
 import document from '../images/document.svg';
 
 const determine = (image, link, screenshots) => {
@@ -14,7 +14,7 @@ const determine = (image, link, screenshots) => {
         return screenshots[i].screenshot
       }
     }
-    return preloader
+    return imgLoader
   }
 }
 

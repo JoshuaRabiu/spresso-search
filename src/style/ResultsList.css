@@ -16,9 +16,24 @@
 
 }
 .top-bar input{
-  margin-left: 3vw;
+  margin-left: 5.4vw;
   height: 5.5vh;
   margin-top: 7px;
   box-shadow: none;
   border: 1px solid lightgrey;
+  display: inline-flex;
+}
+.top-bar h3{
+  display: inline;
+}
+.top-bar h3:hover{
+  cursor: pointer;
+}
+.heading-1{
+  margin-left: 23px;
+  margin-right: 5.5px;
+  color: darkorange;
+}
+.heading-2{
+  color: slategrey;
 }

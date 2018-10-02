@@ -15,7 +15,9 @@ export const ResultsList = ({ results, outline, screenshots, query }) => {
 
   return (
     <div>
-      <div className="top-bar" ><input defaultValue={decodeURI(query)} onKeyPress={(e) => handleKey(e, 'reset')} /><img className="glass" src={glass} /></div>
+      <div className="top-bar" ><h3 className="heading-1">Spresso</h3><h3 className="heading-2">Search</h3>
+        <input defaultValue={decodeURI(query)} onKeyPress={(e) => handleKey(e, 'reset')} /><img className="glass" src={glass} />
+      </div>
       <Outline outline={outline} />
       <InfiniteScroll
         dataLength={len}

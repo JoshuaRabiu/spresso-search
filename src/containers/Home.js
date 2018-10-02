@@ -11,7 +11,7 @@ export const Home = ({results, loadingStatus, outline, query, screenshots}) => {
   if(results.length > 0){
     return <ResultsList results={results} outline={outline} query={query} screenshots={screenshots} query={query} />
   }
-  return <SearchBox results={results} />
+  return <SearchBox query={query} results={results} />
 }
 
 

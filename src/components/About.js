@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import '../style/About.css'
 
 export const About = () => (
   <div>
-    <h3>About Page</h3>
+    <Link to="/">
+      <h3 className="home-1">Spresso</h3><h3 className="home-2">Search</h3>
+    </Link>
   </div>
 )

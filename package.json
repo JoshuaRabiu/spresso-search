@@ -7,6 +7,7 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "morgan": "^1.9.0",
+    "rc-tooltip": "^3.7.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-infinite-scroll-component": "^4.2.0",

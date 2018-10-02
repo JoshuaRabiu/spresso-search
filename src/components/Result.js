@@ -24,7 +24,7 @@ export const Result = ({ data, screenshots }) => (
     <div className="card-body">
       <div className="title-bar">
         <a target="_blank" href={data.link}><img className="favicon" src={!!data.favicon ? data.favicon : `https://www.google.com/s2/favicons?domain=${data.link}`} /></a>
-        <h4 className="title"><a target="_blank" href={data.link}>{data.title}</a><img className="icon" src={document} onClick={() => outline(data.link)} /></h4>
+        <h4 className="title"><a className="ext-link" target="_blank" href={data.link}>{data.title}</a></h4><img className="icon" src={document} onClick={() => outline(data.link)} />
 
       </div>
       <div className="wrap">

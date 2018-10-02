@@ -3,13 +3,13 @@
   float: right;
   position: sticky;
   position: -webkit-sticky;
-  top: 18px;
+  top: 75px;
   display: inline-block;
   background: #fff;
-  border: .008px solid lightgrey;
+  border: .009px solid #f2f2f2;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
   width: 630px;
-  height: 95vh;
+  height: 84vh;
   border-radius: 8px;
   margin-right: 15px;
   overflow: scroll;

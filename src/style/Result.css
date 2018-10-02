@@ -18,7 +18,7 @@ h4 a:hover{
   margin: 15px;
   background: #fff;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
-  border: .008px solid lightgrey;
+  border: .009px solid #f2f2f2;
   transition: all 300ms ease;
 }
 .card:hover{

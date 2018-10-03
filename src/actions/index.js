@@ -1,21 +1,25 @@
 import { store } from '../reducers/index';
 import axios from 'axios';
 
+export const setQuery = (e) => {
+	store.dispatch({ type: 'SET_QUERY', payload: encodeURI(e.target.value) })
+}
+
 export const handleKey = (e, reset) => {
-	store.dispatch(dispatch => {
-		dispatch({ type: 'SET_QUERY', payload: encodeURI(e.target.value) })
 		if (e.key === 'Enter') {
 			if (reset) {
-				dispatch({ type: 'RESET_RESULTS' })
+				store.dispatch({ type: 'RESET_RESULTS' })
 			}
 			search()
 		}
-	})
 }
 
 
-export const search = () => {
+export const search = (reset) => {
 	store.dispatch(dispatch => {
+		if(reset){
+			dispatch({ type: 'RESET_RESULTS' })
+		}
 		dispatch({ type: 'LOADING_STATUS', payload: true })
 		axios.post(`/search/${store.getState().query}`)
 			.then(res => dispatch({ type: 'SEND_RESULTS', payload: res.data }))

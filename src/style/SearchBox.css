@@ -13,8 +13,9 @@
 }
 .home-logo-2{
   display: inline;
+  padding-left: 5.5px;
   text-align: center;
-  color: rgb(197, 195, 195);
+  color: slategrey;
   margin-right: 50px;
 }
 input{

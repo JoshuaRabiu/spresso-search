@@ -17,17 +17,8 @@ const request = require('request');
 const unfluff = require('unfluff');
 const router = Router()
 
-const page = (param) => {
-	if (!!param) {
-		return param
-	}
-	else {
-		return
-	}
-}
-
 router.post('/:query/:start?', (req, res) => {
-	x(`https://www.google.com/search?q=${encodeURI(req.params.query)}&start=${!!req.params.start ? req.params.start : 0}`, '.g', [{
+	x(encodeURI(`https://www.google.com/search?q=${req.params.query}&start=${!!req.params.start ? req.params.start : 0}`), '.g', [{
 		title: 'h3',
 		link: 'a@href | clean',
 		description: '.st',

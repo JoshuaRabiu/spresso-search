@@ -29,13 +29,12 @@ h4 a:hover{
   display: inline-block;
   margin-left: 8px;
   margin-right: 8px;
-  border-bottom: 8px solid transparent;
+  border-bottom: 12px solid transparent;
   text-overflow: ellipsis !important;
   line-height: normal;
   overflow: hidden;
 }
 h4{
-  /* overflow-wrap: break-word; */
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;

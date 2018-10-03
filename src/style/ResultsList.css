@@ -42,7 +42,7 @@
   position: relative;
   left: 40px;
   top: 15px;
-  margin: 0 auto;
-  /* padding: 15px 0 0 30px; */
-  /* margin-left: 10px; */
+}
+.about-bar:hover{
+  text-decoration: underline;
 }

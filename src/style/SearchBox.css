@@ -34,7 +34,6 @@ input{
   box-shadow: 0 12px 24px 0 rgba(0,0,0,0.11), 0 4px 12px 0 rgba(0,0,0,0.08);
   transition: all 300ms ease; 
 }
-
 .glass{
   display: inline-block;
   position: relative;
@@ -46,3 +45,18 @@ input{
 .glass:hover{
   cursor: pointer;
 }
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  * {
+    max-width: 100%;
+}
+  .home{
+    text-align: center;
+  }
+  input{
+    width: 61vw;
+    margin-top: 2vh;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  }

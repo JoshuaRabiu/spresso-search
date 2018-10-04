@@ -22,7 +22,7 @@ const determine = (image, link, screenshots) => {
 
 export const Result = ({ data, screenshots }) => (
   <div className="card">
-    <a target="_blank" href={data.link}><img className="preview" alt="site preview" src={determine(data.image, data.link, screenshots)} /></a>
+    <a target="_blank" href={data.link}><img className="preview" src={determine(data.image, data.link, screenshots)} /></a>
     <div className="card-body">
         <a target="_blank" href={data.link}>
           <img className="favicon" alt="favicon" src={!!data.favicon ? data.favicon : `https://www.google.com/s2/favicons?domain=${data.link}`} />

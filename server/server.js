@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const SearchController = require('./routes/search.js');
+const OutlineController = require('./routes/outline.js');
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
@@ -12,6 +13,7 @@ app.use(bodyParser.json({ type: '*' }));
 const port = process.env.PORT || 1337;
 app.use(logger('dev'));
 app.use('/search', SearchController);
+app.use('/outline', OutlineController);
 app.listen(port, () => {
 	console.log(`App listening on port ${port}`);
 });

@@ -1,8 +1,9 @@
 const { Router } = require('express');
 const xray = require('x-ray');
+
 const x = xray({
 	filters: {
-		clean: (value) => {
+		clean: value => {
 			if (!!value === true) {
 				return value.substr(7).split('&sa=U&ved')[0];
 			} else {
@@ -11,9 +12,6 @@ const x = xray({
 		}
 	}
 });
-
-const request = require('request');
-const unfluff = require('unfluff');
 const router = Router();
 
 router.post('/:query/:start?', (req, res) => {
@@ -31,7 +29,7 @@ router.post('/:query/:start?', (req, res) => {
 				favicon: x('a@href | clean', 'link[rel="icon"]@href')
 			}
 		]
-	).then((obj) => {
+	).then(obj => {
 		let len = obj.length - 1;
 		for (let i = len; i >= 0; --i) {
 			// removes google news, maps, etc results
@@ -41,19 +39,6 @@ router.post('/:query/:start?', (req, res) => {
 		}
 		res.send(obj);
 		console.log(obj);
-	});
-});
-
-router.post('/outline/:site(*)', (req, response) => {
-	const site = req.params.site;
-	request(site, (err, res, body) => {
-		const data = unfluff(body);
-		response.send({
-			title: data.title,
-			text: data.text,
-			link: data.canonicalLink,
-			author: data.author
-		});
 	});
 });
 

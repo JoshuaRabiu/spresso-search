@@ -14,7 +14,7 @@ h4 a:visited {
 	position: relative !important;
 	height: 163px;
 	width: 50.5vw;
-	border-radius: 16px;
+	border-radius: 11px;
 	margin: 15px;
 	background: #fff;
 	/* box-shadow: rgba(36, 37, 38, 0.08) 0px 6px 15px; */
@@ -46,8 +46,8 @@ h4 {
 .preview {
 	width: 250px;
 	height: 100%;
-	border-top-left-radius: 16px;
-	border-bottom-left-radius: 16px;
+	border-top-left-radius: 11px;
+	border-bottom-left-radius: 11px;
 }
 .favicon {
 	position: relative;

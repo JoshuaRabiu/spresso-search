@@ -69,6 +69,6 @@ export const changePage = () => {
 export const outline = site => {
 	store.dispatch(dispatch => {
 		dispatch({ type: 'OUTLINE_LOADING' });
-		axios.post(`/search/outline/${site}`).then(res => dispatch({ type: 'OUTLINE', payload: res.data }));
+		axios.post(`/outline/${site}`).then(res => dispatch({ type: 'OUTLINE', payload: res.data }));
 	});
 };

@@ -11,16 +11,13 @@ h4 a:visited {
 }
 .card {
 	display: flex;
-	position: relative !important;
+	position: relative;
 	height: 163px;
 	width: 50.5vw;
 	border-radius: 11px;
 	margin: 15px;
 	background: #fff;
-	/* box-shadow: rgba(36, 37, 38, 0.08) 0px 6px 15px; */
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
-	/* box-shadow: 0 5px 10px 0 rgb(177, 169, 169); */
-	/* border: .009px solid #f2f2f2; */
 	transition: all 300ms ease;
 }
 .card:hover {
@@ -32,18 +29,18 @@ h4 a:visited {
 	margin-left: 8px;
 	margin-right: 8px;
 	border-bottom: 12px solid transparent;
-	text-overflow: ellipsis ;
+	text-overflow: ellipsis;
 	line-height: normal;
 	overflow: hidden;
 }
-.title{
-	color: #ffa500
+.title {
+	color: #ffa500;
 }
 h4 {
 	display: inline-block;
 	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+	/* overflow: hidden;
+	text-overflow: ellipsis; */
 	max-width: 45ch;
 }
 .preview {
@@ -58,6 +55,7 @@ h4 {
 	width: 18px;
 	height: 18px;
 	float: left;
+	clear: both;
 	margin: 13px;
 }
 .wrap {
@@ -81,33 +79,30 @@ h4 {
 	* {
 		font-size: 14px;
 	}
-	.top-bar{
+	.top-bar {
 		text-align: center;
 	}
-	.glass{
+	.glass {
 		height: 27px;
 	}
-	input{
+	input {
 		font-size: 16px;
 	}
 	.card {
-		flex-shrink: 0 !important;
-		margin: 0;
 		margin: 10px 5px 10px 3px;
 		width: 98vw;
 	}
 	.card-body {
-    border-bottom: 2.5vh solid transparent;
-    text-overflow: ellipsis;
-    word-break: break-all;
+		border-bottom: 16px solid transparent;
+	}
+	.title {
+		max-width: 18ch;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 	.preview {
-		/* position: relative; */
-		/* top: 50px; */
-		/* left: 10px; */
-		min-width: 39vw;
+		min-width: 37vw;
 		height: 163px;
-		/* border-radius: 0; */
 	}
 	.about-bar {
 		display: none;

@@ -19,7 +19,7 @@ h4 a:hover{
   background: #fff;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.192);
   /* box-shadow: 0 5px 10px 0 rgb(177, 169, 169); */
-  border: .009px solid #f2f2f2;
+  /* border: .009px solid #f2f2f2; */
   transition: all 300ms ease;
 }
 .card:hover{

@@ -7,9 +7,12 @@
   line-height: normal;
 }
 .home-logo{
+  font-weight: 1000;
   display: inline;
   text-align: center;
-  color: darkorange;
+  background-image: linear-gradient(to right, #FF5C1C 0%, #ffc04b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .home-logo-2{
   display: inline;

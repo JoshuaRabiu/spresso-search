@@ -1,6 +1,6 @@
 h4 a{ 
   text-decoration: none;
-  color: darkorange;
+  color: #FF5C1C;
 }
 
 h4 a:hover{
@@ -13,7 +13,7 @@ h4 a:hover{
   display: flex;
   position: relative !important;
   height: 163px;
-  width: 810px;
+  width: 50.5vw;
   border-radius: 8px;
   margin: 15px;
   background: #fff;

@@ -18,7 +18,7 @@ export const ResultsList = ({ results, outline, screenshots, query }) => {
     <div>
       <div className="top-bar" 
       ><Link to="/" target="_self"><h3 className="heading-1">Spresso</h3><h3 className="heading-2">Search</h3></Link>
-        <input defaultValue={decodeURI(query)} onKeyPress={e => handleKey(e, 'reset')} onChange={e => setQuery(e)} /><img onClick={() => search('reset')} className="glass" src={glass} />
+        <input defaultValue={decodeURI(query)} onKeyPress={e => handleKey(e, 'reset')} onChange={e => setQuery(e)} /><img onClick={() => search('reset')} className="glass" alt="magnifying glass" src={glass} />
         <Link to="/about" className="about-bar">About</Link>
       </div>
       <Outline outline={outline} />

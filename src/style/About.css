@@ -2,7 +2,9 @@
   display: inline-block;
 }
 .home-1{
-  color: darkorange;
+  background-image: linear-gradient(to right, #FF5C1C 0%, #ffc04b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-left: 23px;
 
 }

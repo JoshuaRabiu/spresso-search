@@ -32,7 +32,9 @@
 .heading-1{
   margin-left: 23px;
   margin-right: 5.5px;
-  color: darkorange;
+  background-image: linear-gradient(to right, #FF5C1C 0%, #ffc04b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .heading-2{
   color: slategrey;

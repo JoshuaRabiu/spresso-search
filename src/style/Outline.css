@@ -28,3 +28,8 @@
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px){
+  .outline, .placeholder{
+    display: none;
+  }
+}

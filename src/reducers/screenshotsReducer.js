@@ -1,8 +1,8 @@
 export const screenshotsReducer = (state = [], action) => {
-  switch(action.type){
-    case 'SEND_SCREENSHOTS': 
-      return state.concat(action.payload)
-    default:
-      return state
-  }
-}
+	switch (action.type) {
+		case 'SEND_SCREENSHOTS':
+			return state.concat(action.payload);
+		default:
+			return state;
+	}
+};

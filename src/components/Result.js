@@ -10,8 +10,7 @@ import document from '../images/document.svg';
 const determine = (image, link, screenshots) => {
 	if (image) {
 		return image;
-	}
-	else if (!image) {
+	} else if (!image) {
 		for (let i = 0; i < screenshots.length; i++) {
 			if (screenshots[i].link === link) {
 				return screenshots[i].screenshot;

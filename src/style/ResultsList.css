@@ -41,9 +41,10 @@
 }
 .about-bar{
   float: right;
-  position: relative;
+  padding: 15px;
+  /* position: relative;
   left: 40px;
-  top: 15px;
+  top: 15px; */
 }
 .about-bar:hover{
   text-decoration: underline;

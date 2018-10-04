@@ -24,7 +24,6 @@ export const Result = ({ data, screenshots }) => (
   <div className="card">
     <a target="_blank" href={data.link}><img className="preview" src={determine(data.image, data.link, screenshots)} /></a>
     <div className="card-body">
-      <div className="title-bar">
         <a target="_blank" href={data.link}>
           <img className="favicon" src={!!data.favicon ? data.favicon : `https://www.google.com/s2/favicons?domain=${data.link}`} />
         </a>
@@ -35,7 +34,6 @@ export const Result = ({ data, screenshots }) => (
           <img className="icon" src={document} onClick={() => outline(data.link)} />
         </ Tooltip>
 
-      </div>
       <div className="wrap">
         <p className="description">{data.description}</p>
       </div>

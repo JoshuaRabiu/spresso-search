@@ -23,7 +23,7 @@ export const ResultsList = ({ results, outline, screenshots, query }) => {
       </div>
       <Outline outline={outline} />
       <InfiniteScroll
-        dataLength={len}
+        dataLength={len - 1}
         next={changePage}
         hasMore={true}
         loader={<p className="loading-text">Loading...</p>}

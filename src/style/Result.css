@@ -48,6 +48,8 @@ h4{
   border-bottom-left-radius: 8px;
 }
 .favicon{
+  position: relative;
+  top: 1vh;
   width: 18px;
   height: 18px;
   float: left;

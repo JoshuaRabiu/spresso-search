@@ -41,18 +41,17 @@ const screenGrab = () => {
 	screenshot(arr)
 }
 
-const screenshot = (param) => {
-	const len = param.length;
+const screenshot = (links) => {
+	const len = links.length;
 	for (let i = 0; i < len; i++) {
-		console.log('running')
-		const link = param[i];
-		const enc = encodeURIComponent(link);
-		axios.get(`https://www.googleapis.com/pagespeedonline/v1/runPagespeed?screenshot=true&url=${enc}`)
+		const link = links[i]
+		const formattedLink = encodeURIComponent(link);
+		axios.get(`https://www.googleapis.com/pagespeedonline/v1/runPagespeed?screenshot=true&url=${formattedLink}`)
 			.then(res => {
-				let sc = res.data.screenshot;
-				let imgData = sc.data.replace(/_/g, '/').replace(/-/g, '+');
-				const scr = 'data:' + sc.mime_type + ';base64,' + imgData;
-				store.dispatch({ type: 'SEND_SCREENSHOTS', payload: { link: link, screenshot: scr } })
+				let rawData = res.data.screenshot;
+				let imgData = rawData.data.replace(/_/g, '/').replace(/-/g, '+');
+				const screenshot = 'data:' + rawData.mime_type + ';base64,' + imgData;
+				store.dispatch({ type: 'SEND_SCREENSHOTS', payload: { link: link, screenshot: screenshot } })
 			})
 	}
 }

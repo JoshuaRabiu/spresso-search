@@ -12,3 +12,14 @@
   color: slategrey;
   padding-left: 5.5px;
 }
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 45vw;
+}
+.center a {
+  color: #ffc04b;
+}

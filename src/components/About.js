@@ -10,10 +10,16 @@ export const About = () => (
 		</Link>
 		<div className="center">
 			<h4>About</h4>
+			<h4><a href="https://github.com/Joshuascript/spresso-search">Source code here</a></h4>
 			<p>
-				Spresso Search is a visual metasearch engine. It scrapes results from google and obtains their meta-data
-				using the <a href="https://github.com/matthewmueller/x-ray">node x-ray</a> library. It also has a text-outline feature (powered by <a href="https://github.com/ageitgey/node-unfluff">node-unfluff</a>) that allows users to read the contents of a web page in clean, formatted text without leaving the Spresso Search site.
+				Spresso Search is a visual metasearch engine built with React, Redux and Express. It scrapes results from Google and obtains their meta-data
+				using the <a href="https://github.com/matthewmueller/x-ray">node x-ray</a> library. It also has a text-outline feature (powered by <a href="https://github.com/ageitgey/node-unfluff">node-unfluff</a>) that allows you to read the contents of a web page in clean, formatted text without leaving the Spresso Search site.
 			</p>
+			<ul>
+				Attributions:
+				<li>Icons: <a href="https://www.flaticon.com/free-icon/magnifying-glass-browser_70490#term=search&page=1&position=45">Magnifying Glass</a> | <a href="https://www.flaticon.com/free-icon/text-document_32329#term=text&page=1&position=9">Outline</a></li>
+				<li><a href="https://codepen.io/rbv912/pen/dYbqLQ">Loading Animation</a></li>
+			</ul>
 		</div>
 	</div>
 );

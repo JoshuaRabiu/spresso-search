@@ -45,12 +45,10 @@ h4 a:visited {
 h4 {
 	display: inline-block;
 	white-space: nowrap;
-	/* overflow: hidden;
-	text-overflow: ellipsis; */
 	max-width: 45ch;
 }
 .preview {
-	width: 250px;
+	width: 18vw;
 	height: 100%;
 	border-top-left-radius: 11px;
 	border-bottom-left-radius: 11px;
@@ -83,7 +81,7 @@ h4 {
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	* {
-		font-size: 14px;
+		font-size: 13px;
 	}
 	.top-bar {
 		text-align: center;
@@ -99,7 +97,7 @@ h4 {
 		width: 98vw;
 	}
 	.card-body {
-		border-bottom: 16px solid transparent;
+		/* border-bottom: 1px solid transparent; */
 	}
 	.title {
 		max-width: 18ch;

@@ -8,5 +8,9 @@ export const About = () => (
 			<h3 className="home-1">Spresso</h3>
 			<h3 className="home-2">Search</h3>
 		</Link>
+		<div className="home">
+			<h4>About</h4>
+			<p>Text TextTextTextTextTextText</p>
+		</div>
 	</div>
 );

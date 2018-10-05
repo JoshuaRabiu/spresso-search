@@ -38,7 +38,6 @@ router.post('/:query/:start?', (req, res) => {
 			}
 		}
 		res.send(obj);
-		console.log(obj);
 	});
 });
 

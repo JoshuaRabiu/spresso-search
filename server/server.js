@@ -5,6 +5,10 @@ const SearchController = require('./routes/search.js');
 const OutlineController = require('./routes/outline.js');
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+process.on('UnhandledPromiseRejectionWarning' || 'TypeError', (err) => {
+	console.err(err)
+	process.exit(1)
+})
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));

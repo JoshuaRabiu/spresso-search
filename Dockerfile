@@ -1,6 +1,6 @@
 FROM node:10.1.0
 COPY . .
-CMD ["yarn global add pm2", "yarn"]
+RUN yarn global add pm2 && yarn && yarn build
+WORKDIR ./server
 EXPOSE 1337
-WORKDIR /
-CMD ["yarn build", "pm2 server.js --watch"]
+CMD pm2 start server.js --watch && pm2 logs all

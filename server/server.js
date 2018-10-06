@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const SearchController = require('./routes/search.js');
 const OutlineController = require('./routes/outline.js');
+const path = require('path');
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 process.on('UnhandledPromiseRejectionWarning' || 'TypeError', (err) => {
@@ -11,6 +12,8 @@ process.on('UnhandledPromiseRejectionWarning' || 'TypeError', (err) => {
 })
 
 const app = express();
+app.use(express.static(path.resolve('../', 'build')));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: '*' }));

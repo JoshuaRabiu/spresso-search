@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const xray = require('x-ray');
+const path = require('path');
 
 const x = xray({
 	filters: {
@@ -13,6 +14,10 @@ const x = xray({
 	}
 });
 const router = Router();
+
+router.get('*', (req, res, next) => {
+	res.sendFile(path.resolve('../', 'build/index.html'))
+})
 
 router.post('/:query/:start?', (req, res) => {
 	x(

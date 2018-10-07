@@ -1,5 +1,5 @@
 # spresso-search
-[Work-in-Progress] Visual metasearch engine built with React, Redux, and Express.
+Visual metasearch engine built with React, Redux, and Express.
 ![]()
 ![]()
 

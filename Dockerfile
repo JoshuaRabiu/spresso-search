@@ -3,4 +3,4 @@ COPY . .
 RUN yarn global add pm2 && yarn && yarn build
 WORKDIR ./server
 EXPOSE 1337
-CMD pm2 start server.js --watch && pm2 logs all
+CMD PORT=1337 NODE_PORT=1337 pm2 start server.js

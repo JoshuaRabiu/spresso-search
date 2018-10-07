@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { SearchBox } from '../components/SearchBox';
-import { Loader } from '../components/Loader';
 import { ResultsView } from '../components/ResultsView';
 
 export const Home = ({ results, loadingStatus, outline, query, screenshots }) => {

@@ -32,9 +32,10 @@ export const search = reset => {
 
 const screenGrab = () => {
 	const arr = [];
-	for (let i = 0; i < store.getState().results.length; i++) {
-		if (!!store.getState().results[i].image === false) {
-			arr.push(store.getState().results[i].link);
+	const results = store.getState().results;
+	for (let i = 0; i < results.length; i++) {
+		if (!!results[i].image === false) {
+			arr.push(results[i].link);
 		}
 	}
 	screenshot(arr);

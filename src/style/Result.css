@@ -12,7 +12,7 @@ h4 a:visited {
 .card {
 	display: flex;
 	position: relative;
-	height: 163px;
+	height: 205px;
 	width: 50.5vw;
 	border-radius: 11px;
 	margin: 15px;
@@ -48,7 +48,7 @@ h4 {
 	max-width: 45ch;
 }
 .preview {
-	width: 18vw;
+	width: 21vw;
 	height: 100%;
 	border-top-left-radius: 11px;
 	border-bottom-left-radius: 11px;
@@ -66,6 +66,7 @@ h4 {
 	margin-top: -21px;
 }
 .description {
+	color: #727272;
 	min-height: 0;
 	padding: 0 10px 10px 10px;
 }
@@ -95,9 +96,6 @@ h4 {
 	.card {
 		margin: 10px 5px 10px 3px;
 		width: 98vw;
-	}
-	.card-body {
-		/* border-bottom: 1px solid transparent; */
 	}
 	.title {
 		max-width: 18ch;

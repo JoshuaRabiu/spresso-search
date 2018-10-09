@@ -5,7 +5,7 @@ import { ResultsView } from '../components/ResultsView';
 
 export const Home = ({ results, loadingStatus, outline, query, screenshots }) => {
 	if (loadingStatus === true) {
-		return <ResultsView query={query} loadingStatus={loadingStatus} />
+		return <ResultsView query={query} loadingStatus={loadingStatus} outline={outline} />
 	}
 	if (results.length > 0) {
 		return <ResultsView results={results} outline={outline} screenshots={screenshots} query={query} loadingStatus={loadingStatus} />;

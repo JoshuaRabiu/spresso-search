@@ -7,7 +7,7 @@ import { outline } from '../actions';
 import imgLoader from '../images/imgLoader.gif';
 import document from '../images/document.svg';
 
-const determine = (image, link, screenshots) => {
+const resolveImage = (image, link, screenshots) => {
 	if (image) {
 		return image;
 	} else if (!image) {
@@ -23,7 +23,7 @@ const determine = (image, link, screenshots) => {
 export const Result = ({ data, screenshots }) => (
 	<div className="card">
 		<a target="_blank" href={decodeURI(data.link)}>
-			<img className="preview" src={determine(data.image, data.link, screenshots)} />
+			<img className="preview" src={resolveImage(data.image, data.link, screenshots)} />
 		</a>
 		<div className="card-body">
 			<a target="_blank" href={data.link}>

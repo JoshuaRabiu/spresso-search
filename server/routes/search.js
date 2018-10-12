@@ -37,10 +37,10 @@ router.post('/:query/:start?', (req, res) => {
 	).then(obj => {
 		let len = obj.length - 1;
 		for (let i = len; i >= 0; --i) {
+			// removes google news links, empty links, etc.
 			if(!!obj[i].link === false || obj[i].link.indexOf('http') === -1){
 				obj.splice(i, 1)
-			}
-			
+			}	
 		}
 		res.send(obj);
 	}).catch(error => console.error(error));

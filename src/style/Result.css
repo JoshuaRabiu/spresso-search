@@ -19,6 +19,7 @@ h4 a:visited {
 	background: #fff;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 	transition: all 300ms ease;
+	/* transition: all 0.2s cubic-bezier(0.4,0,1,1); */
 }
 .card:hover {
 	transform: scale(1.01);

@@ -46,8 +46,7 @@ const screenshot = links => {
 	for (let i = 0; i < len; i++) {
 		const link = links[i];
 		const formattedLink = encodeURIComponent(link);
-		axios
-			.get(`https://www.googleapis.com/pagespeedonline/v1/runPagespeed?screenshot=true&url=${formattedLink}`)
+		axios.get(`https://www.googleapis.com/pagespeedonline/v1/runPagespeed?screenshot=true&url=${formattedLink}`)
 			.then(res => {
 				let rawData = res.data.screenshot;
 				let imgData = rawData.data.replace(/_/g, '/').replace(/-/g, '+');

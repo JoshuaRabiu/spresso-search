@@ -1,12 +1,17 @@
 import { combineReducers, applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import logger from 'redux-logger'
-import { resultsReducer } from './resultsReducer.js';
-import { loadingStatusReducer } from './loadingStatus.js';
-import { outlineReducer } from './outlineReducer.js';
-import { queryReducer } from './queryReducer.js';
-import { counterReducer } from './counter.js';
-import { screenshotsReducer } from './screenshotsReducer.js';
+import logger from 'redux-logger';
+import { counterReducer } from './counterReducer';
+import { loadingStatusReducer } from './loadingStatus';
+import { outlineReducer } from './outlineReducer';
+import { queryReducer } from './queryReducer';
+import { resultsReducer } from './resultsReducer';
+import { screenshotsReducer } from './screenshotsReducer';
+
+export interface IAction {
+	type: string;
+	payload?: any;
+}
 
 export const rootReducer = combineReducers({
 	results: resultsReducer,

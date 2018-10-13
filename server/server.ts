@@ -1,8 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
-const SearchController = require('./routes/search.js');
-const OutlineController = require('./routes/outline.js');
+const { SearchController } = require('./routes/search.js');
+const { OutlineController } = require('./routes/outline.js');
 const path = require('path');
 const compression = require('compression');
 
@@ -16,7 +16,7 @@ app.use(logger('dev'));
 app.use('/search', SearchController);
 app.use('/outline', OutlineController);
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 1337;
 
 app.listen(port, () => {
 	console.log(`App listening on port ${port}`);

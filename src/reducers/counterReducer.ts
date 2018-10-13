@@ -1,5 +1,7 @@
+import { IAction } from '.';
+
 const initialState = 0;
-export const counterReducer = (state = initialState, action) => {
+export const counterReducer = (state = initialState, action: IAction) => {
 	switch (action.type) {
 		case 'INCREMENT':
 			return state += 10;

@@ -46,4 +46,4 @@ router.post('/:query/:start?', (req, res) => {
 	}).catch(error => console.error(error));
 });
 
-module.exports = router;
+export const SearchController = router;

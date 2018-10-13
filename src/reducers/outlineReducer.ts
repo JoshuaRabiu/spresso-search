@@ -1,4 +1,6 @@
-export const outlineReducer = (state = '', action) => {
+import { IAction } from '.';
+
+export const outlineReducer = (state = '', action: IAction) => {
 	switch (action.type) {
 		case 'OUTLINE':
 			return action.payload;

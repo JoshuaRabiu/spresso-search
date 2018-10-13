@@ -1,9 +1,10 @@
-const { Router } = require('express');
+const { Request, Response, Router } = require('express');
 const request = require('request');
 const unfluff = require('unfluff');
-const router = Router();
 
-router.post('/:site(*)', (req, response) => {
+const router: any = Router();
+
+router.post('/:site(*)', (req: Request, response: Response) => {
 	const site = req.params.site;
 	request(site, (err, res, body) => {
 		const data = unfluff(body);
@@ -14,4 +15,4 @@ router.post('/:site(*)', (req, response) => {
 	});
 });
 
-module.exports = router;
+export const OutlineController = router;

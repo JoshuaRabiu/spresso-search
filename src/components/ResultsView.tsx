@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { ResultsList } from './ResultsList';
 import { Link } from 'react-router-dom';
 import { Outline } from './Outline';
@@ -7,7 +7,7 @@ import '../style/ResultsView.css';
 import glass from '../images/glass.svg';
 import { Loader } from './Loader';
 
-export const ResultsView = ({ results, outline, screenshots, query, loadingStatus }) => {
+export const ResultsView = ({ results, outline, screenshots, query, loadingStatus }: any) => {
 	const mobile = ['Android','webOS', 'iPhone', 'iPad', 'iPod','BlackBerry'];
 	return (
 		<div>
@@ -28,7 +28,7 @@ export const ResultsView = ({ results, outline, screenshots, query, loadingStatu
 			</div>
 			<Outline outline={outline} />
 			{loadingStatus === true
-				 ? <div className={mobile.includes(navigator.platform) ? null : "load-wrap"}><Loader /></div>
+				 ? <div className={mobile.includes(navigator.platform) ? undefined : "load-wrap"}><Loader /></div>
 				 : <ResultsList results={results} screenshots={screenshots} />
 			}
 		</div>

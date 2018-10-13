@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { Loader } from './Loader';
 import '../style/Outline.css';
 
-export const Outline = ({ outline }) => {
+export const Outline = ({ outline }: any) => {
 	if (outline === 'outline loading...') {
 		return (
 			<div className="outline">

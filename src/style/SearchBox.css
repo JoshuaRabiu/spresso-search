@@ -31,7 +31,7 @@ input{
   border: none;
   border: .009px solid #f2f2f2;
   outline: 0;
-  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15);
+  box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.15);
   transition: all 300ms ease; 
 }
 .glass{

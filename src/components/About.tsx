@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import '../style/About.css';
 
-export const About = () => (
+export const About: React.StatelessComponent = () => (
 	<div>
 		<Link to="/">
 			<h3 className="home-1">Spresso</h3>

@@ -37,10 +37,10 @@ const screenGrab = () => {
 			arr.push(results[i].link);
 		}
 	}
-	screenshot(arr);
+	getScreenshot(arr);
 };
 
-const screenshot = (links: string[]) => {
+const getScreenshot = (links: string[]) => {
 	const len = links.length;
 	for (let i = 0; i < len; i++) {
 		const link = links[i];
@@ -49,8 +49,8 @@ const screenshot = (links: string[]) => {
 			.then(res => {
 				const rawData = res.data.screenshot;
 				const imgData = rawData.data.replace(/_/g, '/').replace(/-/g, '+');
-				const screenshotSrc = 'data:' + rawData.mime_type + ';base64,' + imgData;
-				store.dispatch({ type: 'SEND_SCREENSHOTS', payload: { link, screenshot: screenshotSrc } });
+				const screenshot = 'data:' + rawData.mime_type + ';base64,' + imgData;
+				store.dispatch({ type: 'SEND_SCREENSHOTS', payload: { link, screenshot } });
 			});
 	}
 };

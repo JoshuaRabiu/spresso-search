@@ -22,7 +22,6 @@ export const ResultsList = ({ results, screenshots }: IResultsList)=> {
 			dataLength={len}
 			next={changePage}
 			hasMore={true}
-			loader={<p className="loading-text">Loading...</p>}
 		>
 			{ResultsArray}
 		</InfiniteScroll>

@@ -27,6 +27,7 @@
     "webpack",
     "jest",
     "src/setupTests.ts",
-    "server"
+    "server",
+    "test"
   ]
 }

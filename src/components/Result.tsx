@@ -26,7 +26,7 @@ const resolveImage = (image: any, link: string, screenshots: any[]) => {
 	} else if (!image) {
 		for (let i = 0; i < screenshots.length; i++) {
 			if (screenshots[i].link === link) {
-				return screenshots[i].screenshotSrc;
+				return screenshots[i].screenshot;
 			}
 		}
 		return imgLoader;

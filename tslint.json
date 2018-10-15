@@ -13,6 +13,7 @@
     "grouped-imports": false,
     "object-literal-sort-keys": false,
     "ordered-imports": false,
-    "jsx-no-lambda": false
+    "jsx-no-lambda": false,
+    "no-console": false
   }
 }

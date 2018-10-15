@@ -21,5 +21,5 @@ export const rootReducer = combineReducers({
 	screenshots: screenshotsReducer
 })
 
-const middleware = applyMiddleware(thunk, logger)
+const middleware = applyMiddleware(thunk)
 export const store = createStore(rootReducer, middleware)

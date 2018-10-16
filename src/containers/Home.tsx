@@ -7,7 +7,7 @@ export interface IHomeProps {
 	results?: any[];
 	loadingStatus?: boolean;
 	outline?: any;
-	query?: any;
+	query?: string;
 	counter?: number;
 	screenshots?: any;
 }
@@ -22,7 +22,7 @@ export const Home: React.StatelessComponent<IHomeProps> = ({ results, loadingSta
 	return <SearchBox />;
 };
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: any): IHomeProps => {
 	return {
 		results: state.results,
 		loadingStatus: state.loadingStatus,

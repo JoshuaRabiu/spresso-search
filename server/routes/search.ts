@@ -1,10 +1,19 @@
 const { Router } = require('express');
+import * as express from "express";
 const xray = require('x-ray');
 const path = require('path');
 
+interface IResult {
+	title: string;
+	link: string;
+	description?: string;
+	image?: string;
+	favicon?: string;
+}
+
 const x = xray({
 	filters: {
-		clean: value => {
+		clean: (value: string) => {
 			if (!!value === true) {
 				return value.substr(7).split('&sa=U&ved')[0];
 			} else {
@@ -15,11 +24,11 @@ const x = xray({
 });
 const router = Router();
 
-router.get('*', (req, res, next) => {
+router.get('*', (req: express.Request, res: express.Response, next: express.NextFunction): void => {
 	res.sendFile(path.resolve('../', 'build/index.html'))
 })
 
-router.post('/:query/:start?', (req, res) => {
+router.post('/:query/:start?', (req: express.Request, res: express.Response): void => {
 	x(
 		encodeURI(
 			`https://www.google.com/search?q=${req.params.query}&start=${!!req.params.start ? req.params.start : 0}`
@@ -34,7 +43,7 @@ router.post('/:query/:start?', (req, res) => {
 				favicon: x('a@href | clean', 'link[rel="icon"]@href')
 			}
 		]
-	).then(obj => {
+	).then((obj: IResult[]) => {
 		let len = obj.length - 1;
 		for (let i = len; i >= 0; --i) {
 			// removes google news links, empty links, etc.
@@ -43,7 +52,7 @@ router.post('/:query/:start?', (req, res) => {
 			}	
 		}
 		res.send(obj);
-	}).catch(error => console.error(error));
+	}).catch((error: Error) => console.error(error));
 });
 
 export const SearchController = router;

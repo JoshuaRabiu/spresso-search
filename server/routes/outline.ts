@@ -1,10 +1,11 @@
 const { Request, Response, Router } = require('express');
+import * as express from "express";
 const request = require('request');
 const unfluff = require('unfluff');
 
 const router: any = Router();
 
-router.post('/:site(*)', (req: Request, response: Response) => {
+router.post('/:site(*)', (req: express.Request, response: express.Response) => {
 	const site = req.params.site;
 	request(site, (err, res, body) => {
 		const data = unfluff(body);

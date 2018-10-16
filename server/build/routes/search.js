@@ -5,7 +5,7 @@ const xray = require('x-ray');
 const path = require('path');
 const x = xray({
     filters: {
-        clean: value => {
+        clean: (value) => {
             if (!!value === true) {
                 return value.substr(7).split('&sa=U&ved')[0];
             }
@@ -28,7 +28,7 @@ router.post('/:query/:start?', (req, res) => {
             image: x('a@href | clean', 'meta[property="og:image"]@content'),
             favicon: x('a@href | clean', 'link[rel="icon"]@href')
         }
-    ]).then(obj => {
+    ]).then((obj) => {
         let len = obj.length - 1;
         for (let i = len; i >= 0; --i) {
             // removes google news links, empty links, etc.
@@ -37,6 +37,6 @@ router.post('/:query/:start?', (req, res) => {
             }
         }
         res.send(obj);
-    }).catch(error => console.error(error));
+    }).catch((error) => console.error(error));
 });
 exports.SearchController = router;

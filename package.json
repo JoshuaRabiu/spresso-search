@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/express": "^4.16.0",
     "@types/rc-tooltip": "^3.4.12",
     "@types/react-infinite-scroll-component": "^4.2.3",
     "@types/react-redux": "^6.0.9",
     "@types/react-router-dom": "^4.3.1",
     "@types/redux-logger": "^3.0.6",
+    "@types/request": "^2.47.1",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",

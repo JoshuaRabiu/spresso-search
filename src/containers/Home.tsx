@@ -12,7 +12,7 @@ export interface IHomeProps {
 	screenshots?: any;
 }
 
-export const Home = ({ results, loadingStatus, outline, query, screenshots } : IHomeProps) => {
+export const Home: React.StatelessComponent<IHomeProps> = ({ results, loadingStatus, outline, query, screenshots } : IHomeProps) => {
 	if (loadingStatus === true) {
 		return <ResultsView query={query} loadingStatus={loadingStatus} outline={outline} />
 	}

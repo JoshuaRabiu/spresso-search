@@ -49,9 +49,9 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react-infinite-scroll-component@^4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@types/react-infinite-scroll-component/-/react-infinite-scroll-component-4.2.2.tgz#0cab6e1910761c6d349038f16942f4c8e1244aaa"
+"@types/react-infinite-scroll-component@^4.2.3":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@types/react-infinite-scroll-component/-/react-infinite-scroll-component-4.2.3.tgz#4148e2948ad34b8c67dfb10b20e0a7a79f2b917d"
   dependencies:
     "@types/react" "*"
 

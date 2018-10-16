@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import '../style/About.css';
 
-export const About: React.StatelessComponent = () => (
+export const About: React.StatelessComponent = (): JSX.Element => (
 	<div>
 		<Link to="/">
 			<h3 className="home-1">Spresso</h3>

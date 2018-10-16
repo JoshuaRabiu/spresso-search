@@ -22,7 +22,7 @@ const x = xray({
 		}
 	}
 });
-const router = Router();
+const router: express.Router = Router();
 
 router.get('*', (req: express.Request, res: express.Response, next: express.NextFunction): void => {
 	res.sendFile(path.resolve('../', 'build/index.html'))

@@ -7,7 +7,7 @@ export interface IHomeProps {
 	results?: any[];
 	loadingStatus?: boolean;
 	outline?: any;
-	query?: string;
+	query: string;
 	counter?: number;
 	screenshots?: any;
 }

@@ -4,7 +4,7 @@ import '../style/SearchBox.css';
 import { search, handleKey, setQuery } from '../actions/index';
 import glass from '../images/glass.svg';
 
-export const SearchBox: React.StatelessComponent = () => (
+export const SearchBox: React.StatelessComponent = (): JSX.Element => (
 	<div>
 		<Link className="about" to="/about">
 			About

@@ -4,7 +4,7 @@ import { About } from './components/About';
 import { Switch, Route } from 'react-router-dom';
 import './App.css'
 
-export const App = () => (
+export const App: React.StatelessComponent = ():JSX.Element => (
   <div>
     <Switch>
       <Route exact={true} path="/" component={Home} />

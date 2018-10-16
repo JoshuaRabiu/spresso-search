@@ -3,15 +3,14 @@ import { Loader } from './Loader';
 import '../style/Outline.css';
 
 interface IOutlineProp {
-	outline: IOutlineContent
+	outline?: {
+		title?: string;
+		text?: string;
+	}
 }
 
-interface IOutlineContent {
-	title?: string;
-	text?: string;
-}
 
-export const Outline: React.StatelessComponent<IOutlineProp> = ({ outline }: IOutlineProp) => {
+export const Outline: React.StatelessComponent<IOutlineProp> = ({ outline }: IOutlineProp): JSX.Element => {
 	if (outline === 'outline loading...') {
 		return (
 			<div className="outline">

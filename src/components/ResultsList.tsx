@@ -3,13 +3,13 @@ import * as InfiniteScroll from 'react-infinite-scroll-component';
 import { changePage } from '../actions/index';
 import { Result } from './Result';
 import { IData } from './Result';
-import { IHomeProps } from '../containers/Home';
 
-interface IResultsList extends IHomeProps {
-	results: []
+interface IResultsListProps {
+	results: any[];
+	screenshots: string[];
 }
 
-export const ResultsList = ({ results, screenshots }: IResultsList)=> {
+export const ResultsList = ({ results, screenshots }: IResultsListProps):JSX.Element => {
 	const ResultsArray = [];
 	const len = results.length;
 	

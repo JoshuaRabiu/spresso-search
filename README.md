@@ -1,6 +1,7 @@
-# spresso-search
-![Tesla Model 3 Search Results](https://i.imgur.com/aV3uZr3.png)
+# spresso-search 
 ![Travis-CI Badge](https://travis-ci.com/JoshuaScript/spresso-search.svg?branch=master)
+
+![Tesla Model 3 Search Results](https://i.imgur.com/aV3uZr3.png)
 
 Visual metasearch engine built with React, Redux, Express, and TypeScript.
 

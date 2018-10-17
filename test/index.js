@@ -57,7 +57,7 @@ describe('Spresso Search', async function(){
 			return document.getElementsByClassName('card').length;
 		});
 		await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-		await page.waitFor(4000);
+		await page.waitFor(7000);
 		const numOfCardsAfterScroll = await page.evaluate(() => {
 			return document.getElementsByClassName('card').length;
 		});

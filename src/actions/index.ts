@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { store } from '../reducers';
 
-export const setQuery = (e: any) => {
+export const setQuery = (e: any): void => {
 	store.dispatch({ type: 'SET_QUERY', payload: encodeURI(e.target.value) });
 };
 
-export const handleKey = (e: any, reset?: string) => {
+export const handleKey = (e: any, reset?: string): void => {
 	if (e.key === 'Enter') {
 		if (reset) {
 			store.dispatch({ type: 'RESET_RESULTS' });
@@ -29,7 +29,7 @@ export const search = (reset?: any): void => {
 	});
 };
 
-const screenGrab = () => {
+const screenGrab = (): void => {
 	const arr = [];
 	const results: any = store.getState().results;
 	for (let i = 0; i < results.length; i++) {
@@ -40,7 +40,7 @@ const screenGrab = () => {
 	getScreenshot(arr);
 };
 
-const getScreenshot = (links: string[]) => {
+const getScreenshot = (links: string[]): void => {
 	const len = links.length;
 	for (let i = 0; i < len; i++) {
 		const link = links[i];
@@ -55,7 +55,7 @@ const getScreenshot = (links: string[]) => {
 	}
 };
 
-export const changePage = ():void => {
+export const changePage = (): void => {
 	store.dispatch<any>((dispatch: any): any => {
 		dispatch({ type: 'INCREMENT' });
 		axios.post(`/search/${store.getState().query}/${store.getState().counter}`).then(res => {

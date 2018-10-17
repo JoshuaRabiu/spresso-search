@@ -2,7 +2,7 @@
 Test: Search works when enter is pressed ✔
 Test: Search works when magnifying glass is clicked ✔
 Test: More results are rendered on scroll down ✔
-Test: Text-Outline Works, search specific link 
+Test: Text-Outline Works, returns title and text ✔
  */
 
 const puppeteer = require('puppeteer');

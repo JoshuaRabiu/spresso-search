@@ -13,13 +13,13 @@ describe('Spresso Search', async function(){
 	let page;
 	this.timeout(10000);
 	before(async function(){
-		browser = await puppeteer.launch();
+		browser = await puppeteer.launch( );
 	});
 
 	beforeEach(async function(){
 		page = await browser.newPage();
-		await page.setViewport({ width: 1280, height: 800 });
-		await page.goto('http://127.0.0.1:3000', {
+		await page.setViewport({ width: 1787, height: 377 });
+		await page.goto('http://spresso-search.herokuapp.com/', {
 			waitUntil: 'load'
 		});
 	});
@@ -56,17 +56,15 @@ describe('Spresso Search', async function(){
 		const initialNumOfCards = await page.evaluate(() => {
 			return document.getElementsByClassName('card').length;
 		});
-		console.log(initialNumOfCards);
 		await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-		await page.waitFor(5500);
+		await page.waitFor(4000);
 		const numOfCardsAfterScroll = await page.evaluate(() => {
 			return document.getElementsByClassName('card').length;
 		});
-		console.log(numOfCardsAfterScroll);
 		expect(numOfCardsAfterScroll).to.be.greaterThan(initialNumOfCards);
 	});
 
-	it('Text outline feature returns a title and text', async function(){
+	it('Text outline returns a title and text', async function(){
 		await page.click('input');
 		// Ensures that only text-rich results are returned
 		await page.keyboard.type('tesla site:wikipedia.com');

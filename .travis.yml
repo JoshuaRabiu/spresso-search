@@ -1,5 +1,7 @@
 language: node_js
 node_js:
   - "node"
+install:
+  - yarn global add mocha && yarn add chai puppeteer
 script:
   - mocha

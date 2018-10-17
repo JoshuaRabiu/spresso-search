@@ -13,7 +13,6 @@ describe('Spresso Search', async function(){
 	let page;
 
 	const opts ={
-		headless: false,
 		args: ['--start-fullscreen']
 	}
 	

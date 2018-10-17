@@ -11,14 +11,19 @@ const { expect } = require('chai');
 describe('Spresso Search', async function(){
 	let browser;
 	let page;
-	this.timeout(10000);
+
+	const opts ={
+		headless: false,
+		args: ['--start-fullscreen']
+	}
+	
+	this.timeout(20000);
 	before(async function(){
-		browser = await puppeteer.launch( );
+		browser = await puppeteer.launch(opts);
 	});
 
 	beforeEach(async function(){
 		page = await browser.newPage();
-		await page.setViewport({ width: 1787, height: 377 });
 		await page.goto('http://spresso-search.herokuapp.com/', {
 			waitUntil: 'load'
 		});

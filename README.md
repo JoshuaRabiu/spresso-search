@@ -1,5 +1,6 @@
 # spresso-search 
-![Travis-CI Badge](https://travis-ci.com/JoshuaScript/spresso-search.svg?branch=master)
+![Build Status](https://travis-ci.com/JoshuaScript/spresso-search.svg?branch=master)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ![Tesla Model 3 Search Results](https://i.imgur.com/aV3uZr3.png)
 

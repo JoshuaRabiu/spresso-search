@@ -55,19 +55,21 @@ const getScreenshot = (links: string[]): void => {
 	}
 };
 
-export const changePage = (): void => {
+export const nextPage = (): void => {
 	store.dispatch<any>((dispatch: any): any => {
 		dispatch({ type: 'INCREMENT' });
-		axios.post(`/search/${store.getState().query}/${store.getState().counter}`).then(res => {
-			dispatch({ type: 'SEND_RESULTS', payload: res.data });
-			screenGrab();
-		});
+		axios.post(`/search/${store.getState().query}/${store.getState().counter}`)
+			.then(res => {
+				dispatch({ type: 'SEND_RESULTS', payload: res.data });
+				screenGrab();
+			});
 	});
 };
 
 export const outline = (site: string): void => {
 	store.dispatch<any>((dispatch: any): any => {
 		dispatch({ type: 'OUTLINE_LOADING' });
-		axios.post(`/outline/${site}`).then(res => dispatch({ type: 'OUTLINE', payload: res.data }));
+		axios.post(`/outline/${site}`)
+			.then(res => dispatch({ type: 'OUTLINE', payload: res.data }));
 	});
 };

@@ -9,7 +9,7 @@ export const SearchBox: React.StatelessComponent = (): JSX.Element => (
 		<Link className="about" to="/about">
 			About
 		</Link>
-		
+
 		<div className="home">
 			<h1 className="home-logo">Spresso</h1> <h1 className="home-logo-2">Search</h1>
 			<input onChange={e => setQuery(e)} onKeyPress={e => handleKey(e)} autoFocus={true} />

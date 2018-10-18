@@ -1,4 +1,3 @@
-/* eslint-disable */
 import * as React from 'react';
 import Tooltip from 'rc-tooltip';
 import 'rc-tooltip/assets/bootstrap_white.css';
@@ -33,7 +32,7 @@ const resolveImage = (image: any, link: string, screenshots: any[]) => {
 	}
 };
 
-export const Result = ({ data, screenshots }: IResultProps ) => (
+export const Result = ({ data, screenshots }: IResultProps) => (
 	<div className="card">
 		<a target="_blank" href={decodeURI(data.link)}>
 			<img className="preview" src={resolveImage(data.image, data.link, screenshots)} />
@@ -57,7 +56,6 @@ export const Result = ({ data, screenshots }: IResultProps ) => (
 			>
 				<img className="icon" alt="outline" src={document} onClick={() => outline(data.link)} />
 			</Tooltip>
-
 			<div className="wrap">
 				<p className="description">{data.description}</p>
 			</div>

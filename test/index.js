@@ -13,9 +13,15 @@ describe('Spresso Search', async function(){
 	let page;
 
 	const opts = {
+<<<<<<< HEAD
 		args: ['--start-fullscreen']
 	}
 	
+=======
+		args: [ '--start-fullscreen' ]
+	};
+
+>>>>>>> formatting
 	this.timeout(20000);
 	before(async function(){
 		browser = await puppeteer.launch(opts);

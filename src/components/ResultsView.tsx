@@ -7,7 +7,7 @@ import '../style/ResultsView.css';
 import glass from '../images/glass.svg';
 import { Loader } from './Loader';
 
-export const ResultsView: React.StatelessComponent<any> = ({ results, outline, screenshots, query, loadingStatus }: any):JSX.Element => {
+export const ResultsView: React.StatelessComponent<any> = ({ results, outline, screenshots, query, loadingStatus }: any): JSX.Element => {
 	const mobile: string[] = ['Android', 'webOS', 'iPhone', 'iPad', 'iPod', 'BlackBerry'];
 	return (
 		<div>
@@ -28,7 +28,7 @@ export const ResultsView: React.StatelessComponent<any> = ({ results, outline, s
 			</div>
 			<Outline outline={outline} />
 			{loadingStatus === true
-				 ? <div className={mobile.includes(navigator.platform) ? undefined : "load-wrap"}><Loader /></div>
+				 ? <div className={mobile.includes(navigator.platform) ? "" : "load-wrap"}><Loader /></div>
 				 : <ResultsList results={results} screenshots={screenshots} />
 			}
 		</div>

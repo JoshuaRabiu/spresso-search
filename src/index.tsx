@@ -9,11 +9,11 @@ import { store } from './reducers/index';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-	<Provider store={store}>
-		<BrowserRouter>
-			<App />
-		</BrowserRouter>
-	</Provider>,
-	document.getElementById('root')
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById('root')
 );
 registerServiceWorker();

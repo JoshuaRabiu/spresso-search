@@ -8,17 +8,17 @@ import { resultsReducer } from './resultsReducer';
 import { screenshotsReducer } from './screenshotsReducer';
 
 export interface IAction {
-	type: string;
-	payload?: any;
+  type: string;
+  payload?: any;
 }
 
 export const rootReducer = combineReducers({
-	results: resultsReducer,
-	loadingStatus: loadingStatusReducer,
-	outline: outlineReducer,
-	query: queryReducer,
-	counter: counterReducer,
-	screenshots: screenshotsReducer
+  results: resultsReducer,
+  loadingStatus: loadingStatusReducer,
+  outline: outlineReducer,
+  query: queryReducer,
+  counter: counterReducer,
+  screenshots: screenshotsReducer
 })
 
 const middleware = applyMiddleware(thunk)

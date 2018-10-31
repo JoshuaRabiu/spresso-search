@@ -1,42 +1,42 @@
 .outline {
-	font-size: 16px;
-	float: right;
-	position: sticky;
-	position: -webkit-sticky;
-	top: 75px;
-	display: inline-block;
-	background: #fff;
-	border: .009px solid #f2f2f2;
-	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
-	width: 41vw;
-	height: 84vh;
-	border-radius: 20px;
-	margin-right: 15px;
-	overflow: scroll;
-	max-width: 100%;
-	overflow-x: hidden;
-	padding: 20px;
-	line-height: 19pt;
-	text-align: justify;
+  font-size: 16px;
+  float: right;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 75px;
+  display: inline-block;
+  background: #fff;
+  border: .009px solid #f2f2f2;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+  width: 41vw;
+  height: 84vh;
+  border-radius: 20px;
+  margin-right: 15px;
+  overflow: scroll;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 20px;
+  line-height: 19pt;
+  text-align: justify;
 }
 .outline h3 {
-	font-style: italic;
+  font-style: italic;
 }
 .outline p {
-	color: #727272;
+  color: #727272;
 
 }
 .placeholder {
-	opacity: 0.4;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-right: -50%;
-	transform: translate(-50%, -50%);
+  opacity: 0.4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-	.outline,
-	.placeholder {
-		display: none;
-	}
+  .outline,
+  .placeholder {
+    display: none;
+  }
 }

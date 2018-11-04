@@ -1,39 +1,39 @@
 .home-1,
 .home-2 {
-	display: inline-block;
+  display: inline-block;
 }
 .home-1 {
-	background-image: linear-gradient(to right, #ff5c1c 0%, #ffc04b 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	margin-left: 23px;
+  background-image: linear-gradient(to right, #ff5c1c 0%, #ffc04b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 23px;
 }
 .home-2 {
-	color: #727272;
-	padding-left: 5.5px;
+  color: #727272;
+  padding-left: 5.5px;
 }
 .center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-right: -50%;
-	transform: translate(-50%, -50%);
-	width: 45vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 45vw;
 }
 .center a {
-	color: #ffc04b;
+  color: #ffc04b;
 }
 .center a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 .center h4 {
-	display: block;
+  display: block;
 }
 ul,
 li {
-	list-style: none;
+  list-style: none;
 }
 ul,
 li::before {
-	content: "- ";
+  content: "- ";
 }

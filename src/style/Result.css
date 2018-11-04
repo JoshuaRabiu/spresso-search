@@ -1,115 +1,115 @@
 h4 a {
-  text-decoration: none;
-  color: #ffa500;
+	text-decoration: none;
+	color: #ffa500;
 }
 
 h4 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 h4 a:visited {
-  color: #962a00;
+	color: #962a00;
 }
 .card {
-  display: flex;
-  position: relative;
-  height: 205px;
-  width: 50.5vw;
-  border-radius: 20px;
-  margin: 15px;
-  background: #fff;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
-  transition: all 300ms ease;
+	display: flex;
+	position: relative;
+	height: 205px;
+	width: 50.5vw;
+	border-radius: 20px;
+	margin: 15px;
+	background: #fff;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+	transition: all 300ms ease;
 }
 .card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+	transform: scale(1.01);
+	box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
 }
 .card-body {
-  display: inline-block;
-  margin-left: 8px;
-  margin-right: 8px;
-  border-bottom: 12px solid transparent;
-  text-overflow: ellipsis;
-  line-height: normal;
-  overflow: hidden;
+	display: inline-block;
+	margin-left: 8px;
+	margin-right: 8px;
+	border-bottom: 12px solid transparent;
+	text-overflow: ellipsis;
+	line-height: normal;
+	overflow: hidden;
 }
 .title {
-  color: #ffa500;
-  max-width: 22vw;
-  text-overflow: ellipsis;
-  overflow: hidden;
+	color: #ffa500;
+	max-width: 22vw;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
-.title:visited{
-  color: #962a00;
+.title:visited {
+	color: #962a00;
 }
 h4 {
-  display: inline-block;
-  white-space: nowrap;
-  max-width: 45ch;
+	display: inline-block;
+	white-space: nowrap;
+	max-width: 45ch;
 }
 .preview {
-  width: 21vw;
-  height: 100%;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+	width: 21vw;
+	height: 100%;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
 }
 .favicon {
-  position: relative;
-  top: 1vh;
-  width: 18px;
-  height: 18px;
-  float: left;
-  clear: both;
-  margin: 13px;
+	position: relative;
+	top: 1vh;
+	width: 18px;
+	height: 18px;
+	float: left;
+	clear: both;
+	margin: 13px;
 }
 .wrap {
-  margin-top: -21px;
+	margin-top: -21px;
 }
 .description {
-  color: #727272;
-  min-height: 0;
-  padding: 0 10px 10px 10px;
+	color: #727272;
+	min-height: 0;
+	padding: 0 10px 10px 10px;
 }
 .icon {
-  position: relative;
-  bottom: 27px;
-  vertical-align: bottom;
-  display: inline-block;
-  padding-left: 10px;
-  width: 17px;
-  height: 17px;
-  cursor: pointer;
+	position: relative;
+	bottom: 27px;
+	vertical-align: bottom;
+	display: inline-block;
+	padding-left: 10px;
+	width: 17px;
+	height: 17px;
+	cursor: pointer;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  * {
-    font-size: 13px;
-  }
-  .top-bar {
-    text-align: center;
-  }
-  .glass {
-    height: 27px;
-  }
-  input {
-    font-size: 16px;
-  }
-  .card {
-    margin: 10px 5px 10px 3px;
-    width: 98vw;
-  }
-  .title {
-    max-width: 18ch;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  .preview {
-    min-width: 37vw;
-    height: 205px;
-  }
-  .about-bar {
-    display: none;
-  }
-  .icon {
-    display: none;
-  }
+	* {
+		font-size: 13px;
+	}
+	.top-bar {
+		text-align: center;
+	}
+	.glass {
+		height: 27px;
+	}
+	input {
+		font-size: 16px;
+	}
+	.card {
+		margin: 10px 5px 10px 3px;
+		width: 98vw;
+	}
+	.title {
+		max-width: 18ch;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	.preview {
+		min-width: 37vw;
+		height: 205px;
+	}
+	.about-bar {
+		display: none;
+	}
+	.icon {
+		display: none;
+	}
 }

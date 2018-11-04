@@ -4,7 +4,7 @@ const { Router } = require('express');
 const xray = require('x-ray');
 const path = require('path');
 const x = xray({
-    filters: {
+  filters: {
         clean: (value) => {
             if (!!value === true) {
                 return value.substr(7).split('&sa=U&ved')[0];

@@ -25,7 +25,9 @@ Open a new terminal tab/window in the same directory, and run `cd server` to go 
 
 Run `node ./build/server.js` to start the server. The app is now ready for use.
 
-If making any modifications to the server's TypeScript code, you should start the TypeScript compiler in watch mode with `tsc -w` so your changes can be tracked in the JS build.
+If making any modifications to the server's TypeScript code, you should start the TypeScript compiler in watch mode with
+
+ `tsc -w` so your changes can be tracked in the JS build.
 
 
 ## License

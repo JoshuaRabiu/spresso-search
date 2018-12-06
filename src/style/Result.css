@@ -28,7 +28,7 @@ h4 a:visited {
   display: inline-block;
   margin-left: 8px;
   margin-right: 8px;
-  border-bottom: 12px solid transparent;
+  border-bottom: 6px solid transparent;
   text-overflow: ellipsis;
   line-height: normal;
   overflow: hidden;
@@ -39,7 +39,7 @@ h4 a:visited {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.title:visited {
+.title:visited{
   color: #962a00;
 }
 h4 {
@@ -66,7 +66,7 @@ h4 {
   margin-top: -21px;
 }
 .description {
-  color: #727272;
+  color: #545454;
   min-height: 0;
   padding: 0 10px 10px 10px;
 }
@@ -97,14 +97,17 @@ h4 {
     margin: 10px 5px 10px 3px;
     width: 98vw;
   }
+  .card-body {
+    border-bottom: 10px solid transparent;
+  }
   .title {
     max-width: 18ch;
     text-overflow: ellipsis;
     overflow: hidden;
   }
   .preview {
-    min-width: 37vw;
-    height: 205px;
+    min-width: 41vw;
+    height: 174px;
   }
   .about-bar {
     display: none;

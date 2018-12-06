@@ -2,7 +2,7 @@
   display: none;
 }
 .loading-text {
-  color: #727272;
+  color: #545454;
   margin: 15px;
 }
 .top-bar {
@@ -36,7 +36,7 @@
   -webkit-text-fill-color: transparent;
 }
 .heading-2 {
-  color: #727272;
+  color: #545454;
 }
 .about-bar {
   float: right;

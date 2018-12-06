@@ -2,9 +2,9 @@
 [![Build Status](https://travis-ci.com/JoshuaScript/spresso-search.svg?branch=master)](https://travis-ci.com/JoshuaScript/spresso-search)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-![Tesla Model 3 Search Results](https://i.imgur.com/aV3uZr3.png)
+![Tesla Model 3 Search Results](https://imgur.com/a/zOF7qFK)
 
-Visual metasearch engine built with React, Redux, Express, and TypeScript.
+>Visual metasearch engine built with React, Redux, Express, and TypeScript.
 
 [Live link to site](http://spresso-search.herokuapp.com/)
 

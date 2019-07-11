@@ -25,34 +25,38 @@ const x = xray({
 const router: express.Router = Router();
 
 router.get('*', (req: express.Request, res: express.Response, next: express.NextFunction): void => {
-  res.sendFile(path.resolve('../', 'build/index.html'))
-})
+  res.sendFile(path.resolve('../', 'build/index.html'));
+});
 
 router.post('/:query/:start?', (req: express.Request, res: express.Response): void => {
+  const { query, start } = req.params;
   x(
-    encodeURI(
-      `https://www.google.com/search?q=${req.params.query}&start=${!!req.params.start ? req.params.start : 0}`
+    encodeURI(`https://www.google.com/search?q=${query}&start=${!!start 
+      ? start 
+      : 0}&pws=0&gl=us&gws_rd=cr`
     ),
-    '.g',
+    'div[class="jfp3ef"]',
     [
       {
-        title: 'h3',
+        title: '.BNeawe.vvjwJb.AP7Wnd',
         link: 'a@href | clean',
-        description: '.st',
+        description: '.BNeawe.s3v9rd.AP7Wnd',
         image: x('a@href | clean', 'meta[property="og:image"]@content'),
         favicon: x('a@href | clean', 'link[rel="icon"]@href')
       }
     ]
-  ).then((obj: IResult[]) => {
-    let len = obj.length - 1;
-    for (let i = len; i >= 0; --i) {
-      // removes google news links, empty links, etc.
-      if(!!obj[i].link === false || obj[i].link.indexOf('http') === -1){
-        obj.splice(i, 1)
-      }	
-    }
-    res.send(obj);
-  }).catch((error: Error) => console.error(error));
+  )
+    .then((obj: IResult[]) => {
+      let len = obj.length - 1;
+      for (let i = len; i >= 0; --i) {
+        // removes google news links, empty links, etc.
+        if (!!obj[i].link === false || obj[i].link.indexOf('http') === -1) {
+          obj.splice(i, 1);
+        }
+      }
+      console.log(obj);
+    })
+    .catch((error: Error) => console.error(error));
 });
 
 export const SearchController = router;

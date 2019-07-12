@@ -55,6 +55,7 @@ router.post('/:query/:start?', (req: express.Request, res: express.Response): vo
         }
       }
       console.log(obj);
+      res.send(obj);
     })
     .catch((error: Error) => console.error(error));
 });

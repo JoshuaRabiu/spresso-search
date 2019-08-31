@@ -9,9 +9,9 @@ import document from '../images/document.svg';
 export interface  IData {
   title: string;
   link: string;
-  description?: string;
-  image?: string;
+  snippet?: string;
   favicon?: string;
+  pagemap?: {cse_image?: any};
 }
 
 interface IResultProps {
@@ -19,10 +19,11 @@ interface IResultProps {
   screenshots: string[];
 }
 
-const resolveImage = (image: any, link: string, screenshots: any[]) => {
-  if (image) {
-    return image;
-  } else if (!image) {
+const resolveImage = (pagemap: IData['pagemap'], link: string, screenshots: any[]) => {
+  if (pagemap && pagemap.cse_image) {
+    const [{src}] = pagemap.cse_image;
+    return src;
+  } else {
     for (let i = 0; i < screenshots.length; i++) {
       if (screenshots[i].link === link) {
         return screenshots[i].screenshot;
@@ -35,7 +36,7 @@ const resolveImage = (image: any, link: string, screenshots: any[]) => {
 export const Result = ({ data, screenshots }: IResultProps) => (
   <div className="card">
     <a target="_blank" href={decodeURI(data.link)}>
-      <img className="preview" src={resolveImage(data.image, data.link, screenshots)} />
+      <img className="preview" src={resolveImage(data.pagemap, data.link, screenshots)} />
     </a>
     <div className="card-body">
       <a target="_blank" href={data.link}>
@@ -57,7 +58,7 @@ export const Result = ({ data, screenshots }: IResultProps) => (
         <img className="icon" alt="outline" src={document} onClick={() => outline(data.link)} />
       </Tooltip>
       <div className="wrap">
-        <p className="description">{data.description}</p>
+        <p className="description">{data.snippet}</p>
       </div>
     </div>
   </div>

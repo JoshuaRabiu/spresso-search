@@ -28,8 +28,7 @@
     "redux-thunk": "^2.3.0",
     "request": "^2.88.0",
     "styled-components": "^3.4.5",
-    "unfluff": "^3.2.0",
-    "x-ray": "^2.3.3"
+    "unfluff": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts-ts start",

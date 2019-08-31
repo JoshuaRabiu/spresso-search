@@ -20,7 +20,8 @@ export const search = (reset?: any): void => {
       dispatch({ type: 'RESET_RESULTS' });
     }
     dispatch({ type: 'LOADING_STATUS', payload: true });
-    axios.post(`/search/${store.getState().query}`)
+    axios
+      .post(`/search/${store.getState().query}`)
       .then((res: any) => dispatch({ type: 'SEND_RESULTS', payload: res.data }))
       .then(() => {
         dispatch({ type: 'LOADING_STATUS', payload: false });
@@ -45,12 +46,15 @@ const getScreenshot = (links: string[]): void => {
   for (let i = 0; i < len; i++) {
     const link = links[i];
     const formattedLink = encodeURIComponent(link);
-    axios.get(`https://www.googleapis.com/pagespeedonline/v1/runPagespeed?screenshot=true&url=${formattedLink}`)
+    axios
+      .get(`https://www.googleapis.com/pagespeedonline/v1/runPagespeed?screenshot=true&url=${formattedLink}`)
       .then(res => {
         const rawData = res.data.screenshot;
-        const imgData = rawData.data.replace(/_/g, '/').replace(/-/g, '+');
-        const screenshot = 'data:' + rawData.mime_type + ';base64,' + imgData;
-        store.dispatch({ type: 'SEND_SCREENSHOTS', payload: { link, screenshot } });
+        if (rawData) {
+          const imgData = rawData.data.replace(/_/g, '/').replace(/-/g, '+');
+          const screenshot = 'data:' + rawData.mime_type + ';base64,' + imgData;
+          store.dispatch({ type: 'SEND_SCREENSHOTS', payload: { link, screenshot } });
+        }
       });
   }
 };
@@ -58,18 +62,16 @@ const getScreenshot = (links: string[]): void => {
 export const nextPage = (): void => {
   store.dispatch<any>((dispatch: any): any => {
     dispatch({ type: 'INCREMENT' });
-    axios.post(`/search/${store.getState().query}/${store.getState().counter}`)
-      .then(res => {
-        dispatch({ type: 'SEND_RESULTS', payload: res.data });
-        screenGrab();
-      });
+    axios.post(`/search/${store.getState().query}/${store.getState().counter}`).then(res => {
+      dispatch({ type: 'SEND_RESULTS', payload: res.data });
+      screenGrab();
+    });
   });
 };
 
 export const outline = (site: string): void => {
   store.dispatch<any>((dispatch: any): any => {
     dispatch({ type: 'OUTLINE_LOADING' });
-    axios.post(`/outline/${site}`)
-      .then(res => dispatch({ type: 'OUTLINE', payload: res.data }));
+    axios.post(`/outline/${site}`).then(res => dispatch({ type: 'OUTLINE', payload: res.data }));
   });
 };

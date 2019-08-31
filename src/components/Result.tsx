@@ -42,7 +42,7 @@ export const Result = ({ data, screenshots }: IResultProps) => (
       <a target="_blank" href={data.link}>
         <img
           className="favicon"
-          src={!!data.favicon ? data.favicon : `https://www.google.com/s2/favicons?domain=${data.link}`}
+          src={`https://www.google.com/s2/favicons?domain=${data.link}`}
         />
       </a>
       <h4 className="title">
